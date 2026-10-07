@@ -3,7 +3,7 @@ const done = JSON.parse(localStorage.getItem('poTechDone') || '[]');
 
 // 실제로 콘텐츠가 준비된 Day만 여기에 추가합니다.
 // Day 3을 만들면 [1, 2, 3]처럼 숫자만 추가하면 됩니다.
-const AVAILABLE_DAYS = [1, 2];
+const AVAILABLE_DAYS = [1, 2, 3];
 
 COURSE.forEach(([part, days]) => {
   const section = document.createElement('section');

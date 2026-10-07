@@ -1,16 +1,12 @@
-DAY 2 FIX
+PO Tech Daily - Day 3 update
 
-GitHub 저장소에서 아래 3개 파일을 교체/추가하세요.
+GitHub repository에서 아래 파일을 반영하세요.
 
-1. /day.html                  -> 기존 파일 교체
-2. /js/app.js                 -> 기존 파일 교체
-3. /data/day02.js             -> 새 파일 추가
+1. /data/day03.js  -> 새 파일 추가
+2. /js/app.js      -> 기존 파일 교체 (Day 3 활성화)
 
-중요: 폴더 구조를 그대로 유지하세요.
+/day.html은 Day 2 FIXED 버전을 이미 적용했다면 교체할 필요가 없습니다.
+혹시 아직 적용하지 않았다면 이 ZIP의 day.html로 교체하세요.
 
-배포 후 테스트 주소:
-/day.html?day=1
-/day.html?day=2
-
-Day 3 이후에는 data/day03.js를 추가하고 js/app.js의
-AVAILABLE_DAYS = [1, 2]; 를 AVAILABLE_DAYS = [1, 2, 3]; 로 바꾸면 됩니다.
+배포 후 확인:
+/day.html?day=3
