@@ -1,1 +1,11 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PO Tech Daily</title><link rel="stylesheet" href="css/style.css"></head><body><header><div class="wrap"><a class="brand" href="index.html">← PO Tech Daily</a><p>하루 10분, 실무에서 쓰는 개발 지식</p></div></header><main class="wrap lesson-wrap"><div id="lesson"></div></main><script src="data/course.js"></script><script src="data/day01.js"></script><script src="js/lesson.js"></script></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PO Tech Daily</title><link rel="stylesheet" href="css/style.css"></head><body><header><div class="wrap"><a class="brand" href="index.html">← PO Tech Daily</a><p>하루 10분, 실무에서 쓰는 개발 지식</p></div></header><main class="wrap lesson-wrap"><div id="lesson"></div></main><script src="data/course.js"></script><script>
+(function(){
+  const params=new URLSearchParams(location.search);
+  const day=Math.max(1,Math.min(30,Number(params.get('day'))||1));
+  const script=document.createElement('script');
+  script.src=`data/day${String(day).padStart(2,'0')}.js`;
+  script.onload=()=>{const lesson=document.createElement('script');lesson.src='js/lesson.js';document.body.appendChild(lesson)};
+  script.onerror=()=>{document.querySelector('#lesson').innerHTML=`<section class="lesson-card"><h1>Day ${String(day).padStart(2,'0')}</h1><p>아직 학습 콘텐츠가 준비되지 않았어요.</p><p><a class="btn" href="index.html">목차로 돌아가기</a></p></section>`};
+  document.body.appendChild(script);
+})();
+</script></body></html>
